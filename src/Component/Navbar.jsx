@@ -4,6 +4,7 @@ import { FaHamburger } from 'react-icons/fa'
 import { ImCross } from 'react-icons/im'
 import { Link } from 'react-scroll'
 
+
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false)
 
@@ -20,7 +21,7 @@ const Navbar = () => {
         {/* Logo */}
         <div className="flex items-center gap-2">
           <img
-            src="/src/assets/Logo3.png"
+            src="/assets/Logo3.png"
             alt="Logo"
             className="h-25 fixed   overflow-hidden w-auto object-contain"
           />

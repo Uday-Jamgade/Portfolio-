@@ -98,7 +98,7 @@ const About = () => {
       >
         <img
           className='object-cover w-full h-full   rounded-full shadow-lg'
-          src="./src/assets/green.png"
+          src="/assets/green.png"
           alt="About Me"
         />
       </motion.section>
