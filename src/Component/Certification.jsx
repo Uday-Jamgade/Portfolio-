@@ -3,6 +3,9 @@ import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import CertifateCard from './CertifateCard'
 
+
+const Certification = () => {
+
 const certificates = [
   {
     id: 1,
@@ -36,9 +39,7 @@ const certificates = [
     Credential:"https://moonshot.scaler.com/s/sl/tnQ0mLXWYE?_gl=1*1k2hu19*_gcl_au*NjE2NjExMjEyLjE3MzA5OTM2MjM.*FPAU*MTcxNTU4NTYxOC4xNzMwOTkzMTIy*_ga*MzQ1MzI5NzI4LjE3MzA5OTMxMjA.*_ga_53S71ZZG1X*MTczMTM5MTM5MS4xMi4xLjE3MzEzOTU2NTcuMC4wLjE0MjA5ODY5NDM.",
     img:"/assets/javaScript.png"
   }
-
 ]
-const Certification = () => {
 
  return (
     <div className="px-6 py-10 min-h-screen text-white">
