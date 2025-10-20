@@ -42,12 +42,12 @@ const Hero = () => {
       {/* Headings */}
       <div>
         <h1 className='text-3xl sm:text-4xl md:text-5xl font-bold'>Welcome To My</h1>
-        <h1 className='text-4xl sm:text-5xl md:text-6xl font-bold text-fuchsia-600'>Portfolio Website</h1>
+        <h1 className='text-4xl font-bold sm:text-5xl md:text-6xl font-bold text-fuchsia-600'>Portfolio Website</h1>
       </div>
 
       {/* Button */}
       <button className='bg-fuchsia-900 text-white py-2 px-6 rounded text-sm sm:text-base md:text-lg'>
-        WWW.Portfolio.com
+         <a href="/Uday_Satishrao_Jamgade_Resume.pdf" download="/Uday_Satishrao_Jamgade_Resume.pdf">Download CV</a>
       </button>
     </motion.div>
   )
