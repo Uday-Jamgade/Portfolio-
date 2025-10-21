@@ -20,15 +20,16 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
     if (!formData.name || !formData.email || !formData.message) {
-      alert('Please fill out all fields.')
+      alert('Please fill out all fields.')    
       return
     }
 
     emailjs.sendForm(
-      'service_czc6rcf',
-      'template_1ihrojr',
-      formRef.current,
-      'ls43CzXlHPst-YfFG'
+      process.env.REACT_APP_EMAILJS_SERVICE_ID,
+  process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+  formRef.current,
+  process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+
     )
     .then(() => {
       setSubmitted(true)
