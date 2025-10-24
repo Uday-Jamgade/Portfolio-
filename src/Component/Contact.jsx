@@ -24,12 +24,16 @@ const Contact = () => {
       return
     }
 
-    emailjs.sendForm(
-      process.env.REACT_APP_EMAILJS_SERVICE_ID,
-  process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
-  formRef.current,
-  process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+    const Server_id= "service_czc6rcf";
+    const Template_id= "template_ehholb9";
+    const Public_key= "lqjS6oqmD4a_ib5uZ";
 
+    
+    emailjs.sendForm(
+      Server_id,
+      Template_id,
+      formRef.current,
+      Public_key
     )
     .then(() => {
       setSubmitted(true)
@@ -60,7 +64,7 @@ const Contact = () => {
             <MdEmail className="text-fuchsia-500 text-2xl lg:text-6xl" />
             <div>
               <h2 className="lg:text-2xl text-xl font-bold">Email</h2>
-              <p className="text-md">udayjamgade@gmail.com</p>
+              <p className="text-md">udayjamgade1@gmail.com</p>
             </div>
           </div>
           <div className="flex items-center gap-3">
