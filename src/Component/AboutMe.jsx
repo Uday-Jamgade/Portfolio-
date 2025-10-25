@@ -53,7 +53,7 @@ const AboutMe = () => {
             whileHover={{ scale: 1.05 }}
             className='px-6 py-2 font-bold bg-fuchsia-900 text-white text-lg sm:text-xl rounded-xl hover:bg-fuchsia-800 transition duration-300'
           >
-            <a href="/Uday_Satishrao_Jamgade_Resume.pdf" download="/Uday_Satishrao_Jamgade_Resume.pdf">Download CV</a>
+            <a href="/Uday-Resume-2025.pdf" download="/Uday-Resume-2025.pdf">Download CV</a>
           </motion.button>
           <motion.button
             whileHover={{ scale: 1.05 }}

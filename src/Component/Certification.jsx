@@ -20,7 +20,7 @@ const certificates = [
     Name:"DataBase (SQL & NoSQL)",  
     IssuedBy: "Udemy",
     IssueDate: "April 2025",
-    Credential:"https://udemy-certificate.s3.amazonaws.com/image/UC-0f4f3b1e-1d6e-4f7c-8a4e-1d2e3f4g5h6i.jpg",
+    Credential:"https://udemy-certificate.s3.amazonaws.com/image/UC-e60a7fad-d421-41da-a3da-25aa8698df75.jpg",
     img:"/assets/dataBase.jpg"
   },
   {

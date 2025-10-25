@@ -1,12 +1,16 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { FaHamburger } from 'react-icons/fa'
 import { ImCross } from 'react-icons/im'
 import { Link } from 'react-scroll'
 
-
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false)
+
+  // Prevent background scroll when mobile menu is open
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? 'hidden' : 'auto'
+  }, [menuOpen])
 
   const navLinks = [
     { label: 'Home', to: 'home' },
@@ -19,13 +23,21 @@ const Navbar = () => {
     <nav className="w-screen fixed top-0 left-0 z-50 px-4 py-3 backdrop-blur-md bg-white/10 border-b border-white/20 shadow-md">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Logo */}
-        <div className="flex items-center gap-2">
-          <img
-            src="/assets/Logo3.png"
-            alt="Logo"
-            className="h-25 fixed   overflow-hidden w-auto object-contain"
-          />
-          {/* <span className="text-xl font-bold text-white hidden sm:inline">Uday.dev</span> */}
+        <div className="flex items-center gap-3">
+          <Link
+            to="home"
+            smooth={true}
+            duration={500}
+            offset={-90}
+            className="flex items-center gap-3 cursor-pointer group"
+          >
+            <div className="bg-gradient-to-r from-fuchsia-600 via-purple-600 to-indigo-600 text-white font-extrabold text-xl sm:text-2xl px-3 py-1 rounded-full shadow-lg group-hover:scale-105 transition-transform duration-300">
+              UJ
+            </div>
+            <span className="text-fuchsia-600 font-bold text-lg sm:text-xl tracking-wide hidden sm:inline ">
+              Uday<span className="text-zinc-400">.dev</span>
+            </span>
+          </Link>
         </div>
 
         {/* Hamburger Icon */}
@@ -44,7 +56,7 @@ const Navbar = () => {
                 to={link.to}
                 smooth={true}
                 duration={500}
-                offset={-70}
+                offset={-90}
               >
                 {link.label}
               </Link>
@@ -59,7 +71,7 @@ const Navbar = () => {
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
-          className="absolute top-16 right-4 md:hidden shadow-lg rounded-md p-4 bg-white/10 backdrop-blur-md border border-white/20 text-white flex flex-col items-end gap-4 text-base font-medium"
+          className="absolute top-16 left-0 w-full md:hidden shadow-lg rounded-b-md p-6 bg-white/10 backdrop-blur-md border-t border-white/20 text-white flex flex-col items-end gap-4 text-base font-medium z-40"
         >
           {navLinks.map((link) => (
             <li key={link.to} className="hover:text-fuchsia-500 cursor-pointer">
@@ -67,7 +79,7 @@ const Navbar = () => {
                 to={link.to}
                 smooth={true}
                 duration={500}
-                offset={-70}
+                offset={-90}
                 onClick={() => setMenuOpen(false)}
               >
                 {link.label}
