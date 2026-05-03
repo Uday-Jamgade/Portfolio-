@@ -47,7 +47,7 @@ const Hero = () => {
 
       {/* Button */}
       <button className='bg-fuchsia-900 font-bold text-white py-2 px-6 rounded text-sm sm:text-base md:text-lg'>
-         <a href="/Uday-Resume-2025.pdf" download="/Uday-Resume-2025.pdf">Download CV</a>
+         <a href="/Uday_Jamgade.pdf" download="/Uday_Jamgade.pdf">Download CV</a>
       </button>
     </motion.div>
   )
